@@ -1,4 +1,3 @@
 function has_key(table, key)
-  local value = table[key] ~= nil
-  return value != nil
+  return table[key] ~= nil
 end
