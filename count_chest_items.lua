@@ -4,9 +4,9 @@ require "tables"
 local filename = "count.txt"
 local from_disk = get_lines(filename)
 
-local printer = peripherals.wrap("bottom")
-local monitor = peripherals.find("monitor")
-local chest = peripherals.find("minecraft:chest")
+local printer = peripheral.wrap("bottom")
+local monitor = peripheral.find("monitor")
+local chest = peripheral.find("minecraft:chest")
 
 local ores = {
   ["minecraft:coal_ore"] = "Coal";
