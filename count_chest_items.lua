@@ -25,6 +25,7 @@ local function add(item)
 end
 
 term.redirect(monitor)
+term.clear()
 term.setCursorPos(1,1)
 
 printer.newPage()
