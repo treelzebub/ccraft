@@ -8,7 +8,7 @@ local printer = peripherals.find("printer")
 local monitor = peripherals.find("monitor")
 local chest = peripherals.find("minecraft:chest")
 
-local table = {
+local ores = {
   ["minecraft:coal_ore"] = "Coal";
   ["minecraft:iron_ore"] = "Iron";
   ["minecraft:gold_ore"] = "Gold";
@@ -21,14 +21,14 @@ local table = {
 }
 
 local function add(item)
-  monitor.write(table[item.name] .. ": " .. item.count)
+  monitor.write(ores[item.name] .. ": " .. item.count)
 end
 
 monitor.setCursorPos(1,1)
 
 for slot, item in pairs(chest.items())
-  local table = chest.items()
-  if has_key(table, item.name) then
+  local ores = chest.items()
+  if has_key(ores, item.name) then
     add(item)
   else
     printer.write("Add to table: " .. item.name)
