@@ -21,7 +21,7 @@ local ores = {
 }
 
 local function add(item)
-  monitor.write(ores[item.name] .. ": " .. item.count)
+  print(ores[item.name] .. ": " .. item.count)
 end
 
 term.redirect(monitor)
@@ -33,7 +33,7 @@ for slot, item in pairs(chest.list()) do
   if has_key(ores, item.name) then
     add(item)
   else
-    print("Add to table: " .. item.name)
+    printer.write("Add to table: " .. item.name)
   end
 end
 printer.endPage()
