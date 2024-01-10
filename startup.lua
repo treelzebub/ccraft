@@ -4,4 +4,8 @@ local function fetch(filename)
   shell.run("wget " .. path .. filename)
 end
 
+fetch("files.lua")
+fetch("tables.lua")
+fetch("count_chest_items.lua")
+
 shell.run("count_chest_items")
