@@ -26,7 +26,7 @@ end
 
 monitor.setCursorPos(1,1)
 
-for slot, item in pairs(chest.items())
+for slot, item in pairs(chest.items()) do
   if has_key(ores, item.name) then
     add(item)
   else
