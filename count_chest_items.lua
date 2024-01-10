@@ -19,4 +19,4 @@ local table = {
     [""] = "";
 }
 
-
+print("Success!")

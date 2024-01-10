@@ -1,5 +1,5 @@
 function get_lines(filename)
-  local file = fs.open(file_name, "r")
+  local file = fs.open(filename, "r")
   if file then
     local lines = io.lines(filename)
     file.close()
@@ -9,4 +9,3 @@ function get_lines(filename)
     return {}
   end
 end
-
