@@ -4,7 +4,7 @@ require "tables"
 local filename = "count.txt"
 local from_disk = get_lines(filename)
 
-local printer = peripherals.wrao("bottom")
+local printer = peripherals.wrap("bottom")
 local monitor = peripherals.find("monitor")
 local chest = peripherals.find("minecraft:chest")
 
