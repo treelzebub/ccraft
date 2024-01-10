@@ -24,14 +24,15 @@ local function add(item)
   monitor.write(ores[item.name] .. ": " .. item.count)
 end
 
-monitor.setCursorPos(1,1)
+term.redirect(monitor)
+term.setCursorPos(1,1)
 
 printer.newPage()
 for slot, item in pairs(chest.list()) do
   if has_key(ores, item.name) then
     add(item)
   else
-    printer.write("Add to table: " .. item.name)
+    print("Add to table: " .. item.name)
   end
 end
 printer.endPage()
