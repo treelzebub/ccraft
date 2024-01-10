@@ -26,6 +26,7 @@ end
 
 monitor.setCursorPos(1,1)
 
+printer.newPage()
 for slot, item in pairs(chest.list()) do
   if has_key(ores, item.name) then
     add(item)
@@ -33,3 +34,4 @@ for slot, item in pairs(chest.list()) do
     printer.write("Add to table: " .. item.name)
   end
 end
+printer.endPage()
