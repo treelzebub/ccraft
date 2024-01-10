@@ -27,7 +27,6 @@ end
 monitor.setCursorPos(1,1)
 
 for slot, item in pairs(chest.items())
-  local ores = chest.items()
   if has_key(ores, item.name) then
     add(item)
   else
