@@ -2,13 +2,13 @@ require "files"
 require "tables"
 
 local filename = "count.txt"
-local from_disk = get_lines(filename)
+local from_disk = io.read(filename)
 
 local printer = peripheral.wrap("bottom")
 local monitor = peripheral.find("monitor")
 local chest = peripheral.find("minecraft:chest")
 
-local ores = {
+local ore_names = {
   ["minecraft:coal_ore"] = "Coal";
   ["minecraft:iron_ore"] = "Iron";
   ["minecraft:gold_ore"] = "Gold";
@@ -21,16 +21,20 @@ local ores = {
 }
 
 local function add(item)
-  print(ores[item.name] .. ": " .. item.count)
+  print(ore_names[item.name] .. ": " .. item.count)
 end
 
+
+
+
+monitor.setTextScale(0.5)
 term.redirect(monitor)
 term.clear()
 term.setCursorPos(1,1)
 
 printer.newPage()
 for slot, item in pairs(chest.list()) do
-  if has_key(ores, item.name) then
+  if has_key(ore_names, item.name) then
     add(item)
   else
     printer.write("Add to table: " .. item.name)
