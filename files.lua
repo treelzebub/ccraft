@@ -9,3 +9,16 @@ function get_lines(filename)
     return {}
   end
 end
+
+function save_table(table, filename)
+  file = fs.open(filename, "w")
+  file.write(textutils.serialize(table))
+  file.close()
+end
+
+function load_table(filename)
+  file = fs.open(filename, "r")
+  table = textutils.unserialize(file.readAll())
+  file.close()
+  return table
+end

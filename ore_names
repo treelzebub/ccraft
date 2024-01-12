@@ -1,0 +1,11 @@
+{
+  ["minecraft:coal_ore"] = "Coal",
+  ["minecraft:iron_ore"] = "Iron",
+  ["minecraft:gold_ore"] = "Gold",
+  ["minecraft:copper_ore"] = "Copper",
+  ["minecraft:redstone_ore"] = "Redstore",
+  ["modern_industrialization:lignite_coal_ore"] = "Lignite Coal",
+  ["modern_industrialization:tin_ore"] = "Tin",
+  ["techreborn:silver_ore"] = "Silver",
+  ["create:zinc_ore"] = "Zinc",
+}

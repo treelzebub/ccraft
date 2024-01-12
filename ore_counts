@@ -1,0 +1,11 @@
+{
+  ["minecraft:coal_ore"] = 0,
+  ["minecraft:iron_ore"] = 0,
+  ["minecraft:gold_ore"] = 0,
+  ["minecraft:copper_ore"] = 0,
+  ["minecraft:redstone_ore"] = 0,
+  ["modern_industrialization:lignite_coal_ore"] = 0,
+  ["modern_industrialization:tin_ore"] = 0,
+  ["techreborn:silver_ore"] = 0,
+  ["create:zinc_ore"] = 0,
+}
